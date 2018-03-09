@@ -4,7 +4,12 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+    @search = Topic.search(params[:q])
+    @topics = @search.result
+    respond_to do |format|
+      format.html
+      format.json { render json: @topics }
+    end
   end
 
   # GET /topics/1

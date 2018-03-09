@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Topics</h1>
+<h1>Listing topics</h1>
+<%= search_form_for @search do |f| %>
+  <%= f.label :title_cont, 'タイトル' %>
+  <%= f.text_field :title_cont %>
+  <div>
+    <%= f.submit '検索する' %>
+  </div>
+<% end %>
 
 <table>
   <thead>
