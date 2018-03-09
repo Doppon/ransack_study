@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :topic_user_id %>
+    <%= form.text_field :user_id, User.all.map { |u| [u.name, u.id]} %>
   </div>
 
   <div class="actions">
