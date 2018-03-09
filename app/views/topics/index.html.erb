@@ -24,7 +24,7 @@
       <tr>
         <td><%= topic.title %></td>
         <td><%= topic.user.name %></td>
-        <td><%= topic.created_at %></td>
+        <td><%= topic.created_at.strftime('%Y/%m/%d %H:%M') %></td>
         <td><%= link_to 'Show', topic %></td>
         <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
         <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
