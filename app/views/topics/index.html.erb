@@ -4,6 +4,10 @@
 <%= search_form_for @search do |f| %>
   <%= f.label :title_cont, 'タイトル' %>
   <%= f.text_field :title_cont %>
+  <br />
+  <%= f.label :created_at, '作成日' %>
+  <%= f.date_select :created_at_gteq, include_blank: true %>〜
+  <%= f.date_select :created_at_lteq, include_blank: true %>
   <div>
     <%= f.submit '検索する' %>
   </div>
